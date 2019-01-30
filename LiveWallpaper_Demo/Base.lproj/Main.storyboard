@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b6T-1N-krn">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Live PhotoVC-->
+        <scene sceneID="Qto-8B-g6h">
+            <objects>
+                <viewController id="Mvg-oe-aJe" customClass="LivePhotoVC" customModule="LiveWallpaper_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l3g-E3-qDv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="86" translatesAutoresizingMaskIntoConstraints="NO" id="0pF-fg-uLl">
+                                <rect key="frame" x="45" y="589" width="285" height="33"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXe-lt-vlk">
+                                        <rect key="frame" x="0.0" y="0.0" width="99.5" height="33"/>
+                                        <color key="backgroundColor" red="0.1218542588" green="0.37482715709999997" blue="0.50719026550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelBttnPressed:" destination="Mvg-oe-aJe" eventType="touchUpInside" id="w57-zY-dUc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydY-qd-Wzc">
+                                        <rect key="frame" x="185.5" y="0.0" width="99.5" height="33"/>
+                                        <color key="backgroundColor" red="0.1218542588" green="0.37482715709999997" blue="0.50719026550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Download">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="downloadBttnPressed:" destination="Mvg-oe-aJe" eventType="touchUpInside" id="9W1-Vb-Sf2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RTF-EB-0y4" firstAttribute="bottom" secondItem="0pF-fg-uLl" secondAttribute="bottom" constant="45" id="1uY-Dn-mH7"/>
+                            <constraint firstItem="RTF-EB-0y4" firstAttribute="trailing" secondItem="0pF-fg-uLl" secondAttribute="trailing" constant="45" id="GOJ-EV-DwC"/>
+                            <constraint firstItem="0pF-fg-uLl" firstAttribute="centerX" secondItem="l3g-E3-qDv" secondAttribute="centerX" id="WAW-wL-QTt"/>
+                            <constraint firstItem="0pF-fg-uLl" firstAttribute="leading" secondItem="RTF-EB-0y4" secondAttribute="leading" constant="45" id="YgQ-ng-8cG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RTF-EB-0y4"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelBttn" destination="gXe-lt-vlk" id="GfK-8m-b2Z"/>
+                        <outlet property="downloadBttn" destination="ydY-qd-Wzc" id="n0z-Kq-8N2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vag-7m-Ym1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1249" y="134"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qhk-an-XRv">
+            <objects>
+                <viewController id="b6T-1N-krn" customClass="ViewController" customModule="LiveWallpaper_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ed4-Sb-h9y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j3T-EI-JUA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="LEE-rm-omB">
+                                <rect key="frame" x="15" y="589" width="345" height="33"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9k-T0-Ofp">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
+                                        <color key="backgroundColor" red="0.1218542588" green="0.37482715709999997" blue="0.50719026550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Preview Live Photo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="makePhotoTapped:" destination="b6T-1N-krn" eventType="touchUpInside" id="bpa-mY-t2W"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FHB-lx-djw" firstAttribute="bottom" secondItem="LEE-rm-omB" secondAttribute="bottom" constant="45" id="APv-LD-2vi"/>
+                            <constraint firstItem="FHB-lx-djw" firstAttribute="trailing" secondItem="LEE-rm-omB" secondAttribute="trailing" constant="15" id="Mrz-F6-nLV"/>
+                            <constraint firstItem="LEE-rm-omB" firstAttribute="leading" secondItem="FHB-lx-djw" secondAttribute="leading" constant="15" id="d9Q-tH-PBh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FHB-lx-djw"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageHolder" destination="j3T-EI-JUA" id="Svb-Zz-zkD"/>
+                        <outlet property="makeLPButton" destination="o9k-T0-Ofp" id="CJS-B0-dtR"/>
+                        <segue destination="Mvg-oe-aJe" kind="show" identifier="previewPhoto" id="J32-IC-YsB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k0x-la-VZo" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="284" y="134"/>
+        </scene>
+    </scenes>
+</document>
