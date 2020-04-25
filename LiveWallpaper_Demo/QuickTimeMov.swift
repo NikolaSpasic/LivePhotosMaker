@@ -136,7 +136,6 @@ class QuickTimeMov {
                     if reader.status == .reading {
                         if let buffer = output.copyNextSampleBuffer() {
                             if !input.append(buffer) {
-                                NSLog("cannot write: \((describing: writer.error?.localizedDescription))")
                                 reader.cancelReading()
                             }
                         }
